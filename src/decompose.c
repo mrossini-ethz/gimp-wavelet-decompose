@@ -34,7 +34,7 @@ add_layer (gint32 image, gint32 parent, wdsint ** img, const char *name,
     layer = gimp_layer_new (image, name, width, height,
 			    gimp_drawable_type (parent), 100.0, mode);
   drawable = gimp_drawable_get (layer);
-  gimp_image_add_layer (image, layer, -1);
+  gimp_image_insert_layer (image, layer, -1, -1);
 
   gimp_pixel_rgn_init (&rgn, drawable, 0, 0, width, height, TRUE, FALSE);
 
@@ -122,7 +122,7 @@ decompose (gint32 image, GimpDrawable * drawable, unsigned int scales)
       gimp_display_new (image);
       layer = gimp_layer_new_from_drawable (drawable->drawable_id, image);
       gimp_drawable_set_name (layer, _("Original"));
-      gimp_image_add_layer (image, layer, 0);
+      gimp_image_insert_layer (image, layer, 0, -1);
       gimp_layer_set_offsets (layer, 0, 0);
       drawable = gimp_drawable_get (layer);
       gimp_image_undo_disable (image);
