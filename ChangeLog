@@ -1,6 +1,11 @@
 ChangeLog
 =========
 
+unreleased
+-------------------------------------------------------------------------------
+- Modification to support new API.
+- Fixes to russian translation.
+
 wavelet-decompose v0.1.2 - minors
 -------------------------------------------------------------------------------
 - Polish translations added.
