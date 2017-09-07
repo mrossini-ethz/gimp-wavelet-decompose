@@ -48,6 +48,7 @@ typedef struct
   unsigned int scales;
   unsigned int new_image;
   unsigned int add_alpha;
+  unsigned int add_mask;
   GimpLayerModeEffects layer_modes;
 } wavelet_settings;
 

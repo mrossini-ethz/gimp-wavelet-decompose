@@ -17,6 +17,7 @@ add_layer (gint32 image, gint32 parent, wdsint ** img, const char *name,
 {
   gint offx, offy;
   gint32 layer;
+  gint32 mask;
   unsigned int x, y, width, height, channels, c;
   GimpPixelRgn rgn;
   GimpDrawable *drawable;
@@ -35,6 +36,12 @@ add_layer (gint32 image, gint32 parent, wdsint ** img, const char *name,
 			    gimp_drawable_type (parent), 100.0, mode);
   drawable = gimp_drawable_get (layer);
   gimp_image_insert_layer (image, layer, -1, -1);
+
+  if (settings.add_mask)
+    {
+      mask = gimp_layer_create_mask(layer, GIMP_ADD_WHITE_MASK);
+      gimp_layer_add_mask(layer, mask);
+    }
 
   gimp_pixel_rgn_init (&rgn, drawable, 0, 0, width, height, TRUE, FALSE);
 

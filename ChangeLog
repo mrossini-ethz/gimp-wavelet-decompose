@@ -3,6 +3,7 @@ ChangeLog
 
 unreleased
 -------------------------------------------------------------------------------
+- New option to add a layer mask to each detail scale layer.
 - Modification to support new API.
 - Fixes to russian translation.
 

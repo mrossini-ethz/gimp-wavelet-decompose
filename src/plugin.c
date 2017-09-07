@@ -23,6 +23,7 @@ MAIN ()
     {GIMP_PDB_INT8, "scale-num", "Number of wavelet scales to decompose"},
     {GIMP_PDB_INT8, "layer-modes", "Set layer mode to grain-merge (boolean)"},
     {GIMP_PDB_INT8, "alpha", "Force alpha channel (boolean)"},
+    {GIMP_PDB_INT8, "mask", "Add layer mask (boolean)"},
     {GIMP_PDB_INT8, "new-image", "Create new image (boolean)"}
   };
 
@@ -46,6 +47,7 @@ wavelet_settings settings = {
   5,				/* scales */
   0,				/* new_image */
   0,				/* add_alpha */
+  0,				/* add_mask */
   GIMP_GRAIN_MERGE_MODE		/* layer_modes */
 };
 
@@ -114,6 +116,7 @@ run (const gchar * name, gint nparams, const GimpParam * param,
       settings.layer_modes =
 	(param[4].data.d_int8) ? GIMP_GRAIN_MERGE_MODE : GIMP_NORMAL_MODE;
       settings.add_alpha = !!(param[5].data.d_int8);
+      settings.add_mask = !!(param[5].data.d_int8);
       settings.new_image = !!(param[6].data.d_int8);
       if (settings.scales < 1 || settings.scales > maxscale)
 	{

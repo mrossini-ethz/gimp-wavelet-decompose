@@ -15,6 +15,7 @@
 #define MODE_TT _("If checked (default) the layer modes of the detail scales are set such that the image is automatically recomposed. If you want to see the individual scales by themselves uncheck this.")
 #define NEW_TT _("Creates a new image with the wavelet decomposition in it. This does not alter the original image.")
 #define ALPHA_TT _("Always adds an alpha channel to each detail scale layer, regardless on whether the original layer had one or not.")
+#define MASK_TT _("Adds a layer mask to each detail scale layer.")
 
 static void
 scale_update (GtkWidget * w, gpointer * p)
@@ -53,6 +54,7 @@ user_interface (GimpDrawable * drawable, unsigned int maxscale)
   GtkObject *scales_adj;
   GtkWidget *mode_check;
   GtkWidget *alpha_check;
+  GtkWidget *mask_check;
   GtkWidget *new_check;
 
   gimp_ui_init (_("Wavelet decompose"), FALSE);
@@ -96,6 +98,17 @@ user_interface (GimpDrawable * drawable, unsigned int maxscale)
 		    &(settings.add_alpha));
   gtk_widget_show (alpha_check);
 
+  /* prepare mask add checkbutton */
+  mask_check =
+    gtk_check_button_new_with_label (_
+				     ("Add layer masks to detail scale layers"));
+  gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (mask_check),
+				settings.add_mask);
+  gtk_widget_set_tooltip_text (mask_check, MASK_TT);
+  g_signal_connect (mask_check, "toggled", G_CALLBACK (toggle_update_bool),
+		    &(settings.add_mask));
+  gtk_widget_show (mask_check);
+
   /* prepare new image checkbutton */
   new_check = gtk_check_button_new_with_label (_("Create new image"));
   gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (new_check),
@@ -111,6 +124,7 @@ user_interface (GimpDrawable * drawable, unsigned int maxscale)
   gtk_box_pack_start (GTK_BOX (dialog_box), scales_box, FALSE, FALSE, 10);
   gtk_box_pack_start (GTK_BOX (dialog_box), mode_check, FALSE, FALSE, 0);
   gtk_box_pack_start (GTK_BOX (dialog_box), alpha_check, FALSE, FALSE, 0);
+  gtk_box_pack_start (GTK_BOX (dialog_box), mask_check, FALSE, FALSE, 0);
   gtk_box_pack_start (GTK_BOX (dialog_box), new_check, FALSE, FALSE, 0);
   gtk_widget_show (dialog_box);
 
