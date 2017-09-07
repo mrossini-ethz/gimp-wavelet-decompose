@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: wavelet-decompose 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-12-30 11:28+0100\n"
+"POT-Creation-Date: 2017-09-07 21:15+0200\n"
 "PO-Revision-Date: 2008-11-18 16:52+0100\n"
 "Last-Translator:  <marco.rossini@gmx.net>\n"
 "Language-Team: German\n"
@@ -16,14 +16,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-
-#: ../src/decompose.c:116
-msgid "Wavelet decompose..."
-msgstr "Wavelet Zerlegung..."
-
-#: ../src/decompose.c:125
-msgid "Original"
-msgstr "Original"
 
 #: ../src/interface.c:14
 msgid ""
@@ -61,51 +53,67 @@ msgstr ""
 "Fügt den Detail-Skalen Ebenen immer einen Alpha Kanal hinzu, egal ob die "
 "ursprüngliche Ebene einen hatte oder nicht."
 
-#: ../src/interface.c:58 ../src/interface.c:116
+#: ../src/interface.c:18
+msgid "Adds a layer mask to each detail scale layer."
+msgstr "Fügt jeder Detail-Skalenebene eine Ebenen-Maske hinzu."
+
+#: ../src/interface.c:60 ../src/interface.c:133
 msgid "Wavelet decompose"
 msgstr "Wavelet Zerlegung"
 
-#: ../src/interface.c:62
+#: ../src/interface.c:64
 msgid "Number of wavelet detail scales:"
 msgstr "Anzahl Wavelet Detail-Skalen:"
 
-#: ../src/interface.c:80
+#: ../src/interface.c:82
 msgid "Set layer modes for recomposition"
 msgstr "Ebenen Modus für Rekomposition einstellen"
 
-#: ../src/interface.c:90
+#: ../src/interface.c:93
 msgid "Add alpha channels to detail scale layers"
 msgstr "Alpha Kanal zu Detail-Skalen Ebenen hinzufügen"
 
-#: ../src/interface.c:98
+#: ../src/interface.c:104
+msgid "Add layer masks to detail scale layers"
+msgstr "Ebenen-Maske zu Detail-Skalen Ebenen hinzufügen"
+
+#: ../src/interface.c:113
 msgid "Create new image"
 msgstr "Neues Bild erstellen"
 
-#: ../src/plugin.c:32
+#: ../src/plugin.c:33
 msgid "Decomposes the image into wavelet scales."
 msgstr "Zerlegt das Bild in Wavelet Skalen."
 
-#: ../src/plugin.c:37
+#: ../src/plugin.c:38
 msgid "_Wavelet decompose ..."
 msgstr "_Wavelet Zerlegung ..."
 
-#: ../src/plugin.c:79
+#: ../src/plugin.c:81
 msgid "Error: The wavelet decompose filter works only on layers!"
 msgstr "Fehler: Der Wavelet zerlegen filter funktioniert nur auf Ebenen!"
 
-#: ../src/wavelet.c:101
+#: ../src/decompose.c:124
+msgid "Wavelet decompose..."
+msgstr "Wavelet Zerlegung..."
+
+#: ../src/decompose.c:131
+msgid "Original"
+msgstr "Original"
+
+#: ../src/wavelet.c:104
 #, c-format
 msgid "Wavelet scale %i"
 msgstr "Wavelet Skala %i"
 
-#: ../src/wavelet.c:108
+#: ../src/wavelet.c:111
 msgid "Wavelet residual"
 msgstr "Wavelet Residual"
 
-#: ../src/wavelet.c:114
+#: ../src/wavelet.c:120
 #, c-format
-msgid "Warning: Some pixels were clipped! Number of ccurences: %i"
-msgstr "Warnung: Einige pixel wurden abgeschnitten! Anzahl Vorkommnisse: %i"
+msgid "Warning: Some pixels were clipped! Number of occurrences: %i"
+msgstr "Warnung: Einige Pixel wurden abgeschnitten! Anzahl Vorkommnisse: %i"
 
 #~ msgid "Error: Image is too small to decompose to that scale."
 #~ msgstr "Fehler: Das Bild ist zu klein um bis zu dieser Skala zu zerlegen."
