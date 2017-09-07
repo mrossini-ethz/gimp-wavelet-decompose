@@ -1,0 +1,4 @@
+po/*.mo
+po/wavelet-decompose.pot
+src/*.o
+src/wavelet-decompose
