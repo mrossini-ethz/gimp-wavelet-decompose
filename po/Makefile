@@ -1,6 +1,6 @@
 PLUGIN = wavelet-decompose
 LOCALEDIR = /usr/share/locale
-LANGUAGES = de ru it pl
+LANGUAGES = ar ca de ru it pl
 
 # END CONFIG ##################################################################
 

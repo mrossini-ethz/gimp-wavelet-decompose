@@ -1,0 +1,92 @@
+# Arabic translations for wavelet-decompose package.
+# Copyright (C) 2008 THE wavelet-decompose'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the wavelet-decompose package.
+#  <marco.rossini@gmx.net>, 2008.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: wavelet-decompose 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-12-30 11:28+0100\n"
+"PO-Revision-Date: 2012-07-26 18:01+0300\n"
+"Last-Translator: Ahmed Shubbar <ahmed.shubbar@gmail.com>\n"
+"Language-Team: Arabic\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../src/decompose.c:116
+msgid "Wavelet decompose..."
+msgstr "تقسيم المويجات..."
+
+#: ../src/decompose.c:125
+msgid "Original"
+msgstr "أصلى"
+
+#: ../src/interface.c:14
+msgid "Sets the number of detail scales for the wavelet decomposition. This value is restricted by the size of the image. Two to the power of the maximal scale must be smaller or equal to the shortest edge."
+msgstr "حدد رقم تدرج التفاصيل لتقسيم المويجات. هذه القيمة محدودة بحجم الصورة. اثنين لأس رقم التدرج يجب ان يكون اقل من اصغر عرض للصورة. "
+
+#: ../src/interface.c:15
+msgid "If checked (default) the layer modes of the detail scales are set such that the image is automatically recomposed. If you want to see the individual scales by themselves uncheck this."
+msgstr "بتأشير هذه (الوضع الافتراضي) تندمج طبقات التفاصيل لتعد تكوين الصورة. أما إذا اردت رؤية طبقات التفاصيل لوحدها فلا تأشر هذه الخيار. "
+
+#: ../src/interface.c:16
+msgid "Creates a new image with the wavelet decomposition in it. This does not alter the original image."
+msgstr "اصنع صورة جديدة بطبقات تقسيم التفاصيل فيها. هذا لا يغير في الصورة الاصلية. "
+
+#: ../src/interface.c:17
+msgid "Always adds an alpha channel to each detail scale layer, regardless on whether the original layer had one or not."
+msgstr "إضافة خاصية الشفافية لكل طبقة تفاصيل, بغض النظر عن الشفافية لدى الطبقة الاصلية."
+
+#: ../src/interface.c:58
+#: ../src/interface.c:116
+msgid "Wavelet decompose"
+msgstr "تقسيم المويجات"
+
+#: ../src/interface.c:62
+msgid "Number of wavelet detail scales:"
+msgstr "عدد مقياس تفاصيل المويجات:"
+
+#: ../src/interface.c:80
+msgid "Set layer modes for recomposition"
+msgstr "حدد طريقة دمج الطبقات"
+
+#: ../src/interface.c:90
+msgid "Add alpha channels to detail scale layers"
+msgstr "اضف شفافية لطبقات التفاصيل"
+
+#: ../src/interface.c:98
+msgid "Create new image"
+msgstr "افتح صورة جديدة"
+
+#: ../src/plugin.c:32
+msgid "Decomposes the image into wavelet scales."
+msgstr "قسم الصورة الى مقياس المويجات"
+
+#: ../src/plugin.c:37
+msgid "_Wavelet decompose ..."
+msgstr "_تقسيم المويجات ..."
+
+#: ../src/plugin.c:79
+msgid "Error: The wavelet decompose filter works only on layers!"
+msgstr "خطأ: تصفية (فلتر) تقسيم المويجات تعمل فقط على الطبقات! "
+
+#: ../src/wavelet.c:101
+#, c-format
+msgid "Wavelet scale %i"
+msgstr "مقياس المويجات %i"
+
+#: ../src/wavelet.c:108
+msgid "Wavelet residual"
+msgstr "بقايا المويجات"
+
+#: ../src/wavelet.c:114
+#, c-format
+msgid "Warning: Some pixels were clipped! Number of ccurences: %i"
+msgstr "تحذير: بعض النقاط تم إلغاءها! عدد الحدوث: %i"
+
+#~ msgid "Error: Image is too small to decompose to that scale."
+#~ msgstr "Fehler: Das Bild ist zu klein um bis zu dieser Skala zu zerlegen."
