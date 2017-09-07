@@ -5,6 +5,10 @@ unreleased
 -------------------------------------------------------------------------------
 - New option to add a layer mask to each detail scale layer.
 - Modification to support new API.
+- Added translations:
+  - Catalan (thanks to Dani Sarda i Lizaran)
+  - Arabic (thanks to Ahmed Shubbar)
+
 - Fixes to russian translation.
 
 wavelet-decompose v0.1.2 - minors
