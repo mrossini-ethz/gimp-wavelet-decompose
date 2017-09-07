@@ -117,7 +117,7 @@ wavelet_decompose (guint32 image, guint32 layer, wdsint ** img,
          integer number. */
       sprintf (str,
 	       _
-	       ("Warning: Some pixels were clipped! Number of ccurences: %i"),
+	       ("Warning: Some pixels were clipped! Number of occurrences: %i"),
 	       clip);
       gimp_message (str);
     }
